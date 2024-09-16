@@ -1,4 +1,4 @@
-# Chordyzer v0.5 - Musical analyzer from localfile songs & YouTube links
+# Chordy v0.5 - Musical analyzer from localfile songs & YouTube links
 ![Chordyzer_Logo](https://github.com/user-attachments/assets/13330661-dc06-481a-ab34-e39869134d54)
 ## Chord Extraction & Database & Analysis Tool
 
