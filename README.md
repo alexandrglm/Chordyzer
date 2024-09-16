@@ -12,9 +12,20 @@ which  **creates a database to analyze and show** chord-key data by  different c
  - pip install numpy librosa chord-extractor json yt-dlp pydub pytube
 
 ## USAGE
+- Run an analisys:
 ```
-$ python Chordyzer.py
+$ python Chordy.py
 
+```
+
+- Generate a chord list
+```
+$ python Library.py
+```
+
+- Manage your database:
+```
+$ ./chords_database.html
 ```
 ![test_v0 3](https://github.com/user-attachments/assets/d84eb007-197e-48ea-b3f4-25d373c852e8)
 
