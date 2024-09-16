@@ -15,7 +15,6 @@ which  **creates a database to analyze and show** chord-key data by  different c
 - Run an analisys:
 ```
 $ python Chordy.py
-
 ```
 
 - Generate a chord list
