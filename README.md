@@ -1,4 +1,4 @@
-# Chordyzer v0.4 - Musical analyzer from localfile songs & YouTube links
+# Chordyzer v0.5 - Musical analyzer from localfile songs & YouTube links
 ![Chordyzer_Logo](https://github.com/user-attachments/assets/13330661-dc06-481a-ab34-e39869134d54)
 ## Chord Extraction & Database & Analysis Tool
 
@@ -9,7 +9,7 @@ which  **creates a database to analyze and show** chord-key data by  different c
 
  - Python 3.9.x
  - sudo apt install ffmpeg 
- - pip install numpy librosa chord-extractor json yt-dlp pydub pytube
+ - pip install numpy librosa chord-extractor json yt-dlp 
 
 ## USAGE
 - Run an analisys:
