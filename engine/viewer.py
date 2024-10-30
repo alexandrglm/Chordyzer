@@ -1,7 +1,7 @@
-from scales import scales
 import os
 import json
 from chord_extractor.extractors import Chordino
+from scales import scales
 
 def sanitize_filename(input_str):
     import unicodedata
@@ -25,12 +25,12 @@ def generate_html_with_chords(audio_file, chords, artist_name, song_title, tempo
     <!DOCTYPE html>
     <html>
     <head>
-        <link rel="icon" href="./favicon.ico" sizes="any">
-        <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+        <link rel="icon" href="./engine/player/favicon.ico" sizes="any"> <!-- pending -->
+        <link rel="icon" href="./engine/player/favicon.svg" type="image/svg+xml"> <!-- pending -->
         <meta charset="UTF-8">
         <title>Chords from {artist_name} - {song_title}</title>
         <script src="./engine/scripts/script.js"></script>
-        <link rel="stylesheet" type="text/css" href="./engine/scripts/style.css" />
+        <link rel="stylesheet" type="text/css" href="./engine/scripts/player.css" /> <!-- pending -->
     </head>
     <body>
     <header>
@@ -41,7 +41,7 @@ def generate_html_with_chords(audio_file, chords, artist_name, song_title, tempo
           Your browser does not support the audio element.
         </audio>
         <label for="bpm-input">BPM:</label>
-        <input type="number" id="bpm-input" class="bpm-input" value="{tempo}" step="1" min="30" max="300" />
+        <input type="number" id="bpm-input" class="bpm-input" value="{tempo}" step="1" min="60" max="360" />
         <button id="update-bpm">Update BPM</button>
         <button id="vel-up">BPM(+)</button>
         <button id="vel-down">BPM(-)</button>
@@ -57,8 +57,8 @@ def generate_html_with_chords(audio_file, chords, artist_name, song_title, tempo
           <input type="radio" id="ukulele" name="instrument" value="ukulele" />
           <label for="ukulele">Ukulele</label>
         </div>
-        <div id="dark-mode-toggle">
-         <button id="toggle-dark-mode">Toggle Dark Mode</button>
+        <div id="dark-mode-toggle"> <!-- pending... move to player.css -->
+         <button id="toggle-dark-mode">Night mode</button>
         </div>
       </div>
       <div id="chord-diagram-bar">
@@ -69,9 +69,9 @@ def generate_html_with_chords(audio_file, chords, artist_name, song_title, tempo
         <h1 id="chord-next"></h1>
       </div>
     </header>
-    <button id="zoom-in">zoom-in(+)</button>
-    <button id="zoom-out">zoom-out(-)</button>
-    <ul id="chords">
+    <button id="zoom-in">Zoom-in(+)</button>
+    <button id="zoom-out">Zoom-out(-)</button>
+    <ul id="chords"> <!-- pending ... convert to external -->
     """
 
     for chord in chords:
