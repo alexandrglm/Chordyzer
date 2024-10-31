@@ -1,3 +1,4 @@
+# 2024 Oct, 31st pending: 
 import os
 
 def generate_chord_list(diagram_path):
@@ -17,9 +18,10 @@ def generate_html(chord_list, output_file):
     <title>Chord List - Guitar </title>
     <link rel="stylesheet" href="./scripts/style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./engine/scripts/script.js> <!-- pending to bifurcate db.js player.js -->
 </head>
 <body>
-    <h1>All known guitar chords listed</h1>
+    <h1>All known guitar chords</h1>
 
     <div class="search-container">
         <input type="text" id="chord-search" placeholder="Search by Chord"...">
