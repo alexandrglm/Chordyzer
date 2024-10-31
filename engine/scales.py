@@ -1,3 +1,5 @@
+# 2024 Oct, 31: issues detected when comparing scales at rumbas, hungarians, etc by longitudes given here
+# new scales2keytone detection method needed 
 scales = {
     'C': {
         'C_major': ['C', 'D', 'E', 'F', 'G', 'A', 'B'],
