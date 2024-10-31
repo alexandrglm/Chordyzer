@@ -1,10 +1,10 @@
 import os
+import re
 import json
-from viewer import generate_html_with_chords
+from player import generate_html_with_chords
 from db import generate_db_html
 from music import extract_chords_from_audio, get_bpm, get_tone_at_beats, load_scales, match_chords_to_scales
 from download_youtube_audio import download_audio_from_youtube
-import re
 
 DB_FILE = "chords_db.json"
 
