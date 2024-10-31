@@ -1,7 +1,11 @@
+// 2024 Oct, 31 Pending: Reordering & adding db js non-externals 
+
 document.addEventListener("DOMContentLoaded", function () {
-  // Obtener elementos
-  const audio = document.querySelector("audio");
+  // audio engine
+  const audio = document.querySelector("audio";
   const chords = document.querySelectorAll("#chords li");
+  // player 
+  const darkModeToggle = document.getElementById("dark-mode-toggle"); /* revisar */
   const transposeCounter = document.getElementById("transpose-counter");
   const transposeUpButton = document.getElementById("transpose-up");
   const transposeDownButton = document.getElementById("transpose-down");
@@ -17,19 +21,25 @@ document.addEventListener("DOMContentLoaded", function () {
   const updateBPMButton = document.getElementById("update-bpm");
   const zoomInButton = document.getElementById("zoom-in");
   const zoomOutButton = document.getElementById("zoom-out");
-  const darkModeToggle = document.getElementById("dark-mode-toggle");
+  // db
+  /* const grepData1 = document.getElementById("Order by A"); */
+  /* const grepData2 = document.getElementById("Order by B"); */
+  /* const grepData3 = document.getElementById("Order by D"); */ 
+  /* const grepData4 = document.getElementById("Order by X"); */
 
   let maxChordLength = 0;
-  let instrument = "guitar";
+  let instrument = "guitar"; "ukelele"
   let playbackRate = 1.0;
   let currentBPM = 120;
 
+  // from const darkModeToggle
   function toggleDarkMode() {
     document.body.classList.toggle('dark-mode');
   }
 
   darkModeToggle.addEventListener("click", toggleDarkMode);
 
+  /* player chord defs */
   chords.forEach((chord) => {
     chord.addEventListener("click", function () {
       audio.currentTime = chord.id;
@@ -64,6 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  /* player chords slidedown */
   function updateAnimationDuration() {
     chords.forEach((chord) => {
       let length = chord.getAttribute("length");
@@ -81,6 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  /* player zoom/transpose/bpm buttons */
   zoomInButton.addEventListener("click", function () {
     scaleChordWidth(1.5);
   });
@@ -130,6 +142,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+  /* from chords to player */
   setInterval(function () {
     const currentTime = audio.currentTime;
     chords.forEach((chord) => {
@@ -156,12 +169,15 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }, 150);
 
+  /* transpose code */
   function transposeChords(amount) {
     chords.forEach((chord) => {
       chord.innerHTML = transposeChord(chord.innerHTML, amount);
     });
   }
 
+  /* fixing sharps; 2024 oct, 31: need to improve */
+  /* three functions */
   function transposeChord(chord, amount) {
     var scale = [
       "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"
@@ -193,7 +209,7 @@ document.addEventListener("DOMContentLoaded", function () {
       .replace(/A%23|A#/g, "Bb");
   }
 
-  function updateKeynote(amount) {
+  function updateKeynote(amount) {  /* real transposing to player */
     const scale = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
     let currentNote = keynoteInput.value;
     let currentIndex = scale.indexOf(currentNote);
