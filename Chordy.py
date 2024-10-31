@@ -1,6 +1,6 @@
-import subprocess
 import os
 import platform
+import subprocess
 
 def clear_screen():
     system = platform.system()
@@ -9,8 +9,9 @@ def clear_screen():
     else:
         os.system('clear')
 
-def run_cho():
-    command = ['python', 'cho.py']
+# 2024 Oct,31, pending ... everything; real cli menu needed BEFORE starting to analyze a file/url
+def run_cho(): 
+    command = ['python', './engine/cho.py']
     print(f"Running command: {' '.join(command)}")
     subprocess.run(command)
 
