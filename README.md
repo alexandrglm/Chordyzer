@@ -46,7 +46,15 @@ The program generates:
  *- ARTIST NAME*
  *- SONG TITLE*
 ![chordizer_info1](https://github.com/user-attachments/assets/edddabfb-23f0-4d63-b49c-1d4dd3900452)
-(Development in progress)
+
+## Development in progress - To Do:
+
+- Fundamental scale detection: The current method, rooted in a mathematical analysis of semitonic intervals, is rather fragile due to the high tonal density of the twelve-tone equal temperament system. The inherent ambiguity of this system hinders the unambiguous identification of the underlying tonal scale.
+
+- Scale database: The scale database and the associated comparison logic require a thorough overhaul. Currently, the high frequency of false positives, especially for scales like the Hungarians, highlights the need to refine the matching criteria.
+
+- Rhythm and meter detection: The excessive reliance on floating-point calculations in the rhythm and meter detection algorithms introduces undesirable variability in the results. Greater robustness is required in these modules to ensure more accurate and reliable detection, prior to tonal analysis.
+
 
 
 2024 September, 16th.
