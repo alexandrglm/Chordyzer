@@ -212,11 +212,14 @@ def generate_html_with_chords(audio_file, chords, artist_name, song_title, tempo
             .replace(/D%23|D#/g, "Eb")
             .replace(/F%23|F#/g, "Gb")
             .replace(/G%23|G#/g, "Ab")
-            .replace(/A%23|A#/g, "Bb");
+            .replace(/A%23|A#/g, "Bb")
+            .replace(/#/, "%23");
         }}
 
         function updateKeynote(amount) {{
-          const scale = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
+          var scale = [
+            "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"
+          ];
           let currentNote = keynoteInput.value;
           let currentIndex = scale.indexOf(currentNote);
           if (currentIndex === -1) return;
