@@ -21,18 +21,20 @@ which **creates a database to analyze and show** chord-key data by different cri
 
 
 ### USAGE
-
-- Run an analisys:
-  
+1. Unpack the guitar chord diagrams:  
+  ```bash
+  $ sh ./0_init.sh
   ```
+2. Run an analisys:  
+     
+  ```bash
   $ python cho.py
   ```
   
 - ~~Generate a chord list~~  
   
-- Manage your database:  
-  
-  ```
+3. Manage your database:  
+  ```bash
   $ ./chords_database.html
   ```
 ![test_v0 3](https://github.com/user-attachments/assets/d84eb007-197e-48ea-b3f4-25d373c852e8)
