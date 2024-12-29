@@ -1,0 +1,119 @@
+body {
+  margin: 0;
+  background: #F08080; /* Fondo neutro claro */
+  color: #424242; /* Texto en gris oscuro */
+  font-family: monospace;
+}
+
+header {
+  display: grid;
+  grid-template-columns: auto auto;
+  height: 200px; /* Ajusta a 150px */
+  position: sticky;
+  top: 0;
+  background: #F5F5F5; /* Blanco Suave para el fondo del header */
+  border-radius: 0 0 10px 10px;
+  padding: 20px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  margin-bottom: 20px; /* Ajusta el margen inferior */
+}
+
+.bpm-input {
+  width: 150px; /* Ajusta el ancho según tus necesidades */
+  height: 20px; /* Ajusta la altura según tus necesidades */
+  font-size: 20px; /* Ajusta el tamaño del texto dentro del input */
+  padding: 5px; /* Espaciado interno para mejor usabilidad */
+  border-radius: 5px; /* Bordes redondeados */
+  border: 1px solid #ccc; /* Color del borde */
+}
+
+.keynote {
+  width: 150px; /* Ajusta el ancho según tus necesidades */
+  height: 20px; /* Ajusta la altura según tus necesidades */
+  font-size: 20px; /* Ajusta el tamaño del texto dentro del input */
+  padding: 5px; /* Espaciado interno para mejor usabilidad */
+  border-radius: 5px; /* Bordes redondeados */
+  border: 1px solid #ccc; /* Color del borde */
+}
+
+#chord-diagram-bar {
+  max-height: 150px;
+  display: flex;
+  align-items: flex-end;
+  width: 378px;
+}
+
+#chord-diagram-current,
+#chord-diagram-next {
+  height: 100%;
+}
+
+#chord-diagram-next,
+#chord-next {
+  opacity: 0.7;
+}
+
+ul#chords {
+  display: flex;
+  padding: 10px;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 30px; /* Aumenta la separación superior */
+}
+
+ul#chords li {
+  list-style: none;
+  background: #C6FF00; /* Verde Pistacho Claro */
+  padding: 5px 10px;
+  font-size: 20px;
+  border-radius: 3px;
+  cursor: pointer;
+  color: #424242; /* Texto en gris oscuro para contraste */
+}
+
+ul#chords li.actived {
+  background: #FFFFFF; /* Blanco para el acorde activo */
+}
+
+ul#chords li.active {
+  background: linear-gradient(to right, #FFFFFF 50%, #C6FF00 50%);
+  background-size: 200% 100%;
+  animation-name: slideBackground;
+  --animation-duration: 1s; /* Valor predeterminado para la animación */
+  animation-duration: var(--animation-duration);
+  animation-timing-function: linear;
+}
+
+audio {
+  width: -webkit-fill-available;
+}
+
+/* Keyframes for the animation */
+@keyframes slideBackground {
+  from {
+    background-position: right;
+  }
+  to {
+    background-position: left;
+  }
+}
+
+button {
+  background-color: #9E9D24; /* Verde Oliva para los botones */
+  color: #FFFFFF; /* Texto blanco en los botones */
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #7B7F0C; /* Verde Oliva más oscuro al pasar el ratón */
+}
+
+/* Estilo para separar los elementos que siguen a la lista de acordes */
+#tempo-changes,
+#key-changes,
+#song-structure {
+  margin-top: 0px; /* Ajusta este valor según sea necesario */
+}
